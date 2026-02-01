@@ -220,3 +220,25 @@ p{ margin: 0; }
 /* ===== Responsive ===== */
 @media(max-width:900px){.grid--cards{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:560px){.grid--cards{grid-template-columns:1fr;}}
+.team-carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-member {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
