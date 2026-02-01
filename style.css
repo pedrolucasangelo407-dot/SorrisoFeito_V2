@@ -1,6 +1,6 @@
 /* ===========================
    SorrisoFeito - style.css
-   Premium base
+   Premium base (ajustado menu)
    =========================== */
 
 :root{
@@ -66,11 +66,24 @@ p{ margin: 0; }
   font-size: 18px;
 }
 
-.nav{
+/* ===== Menu horizontal ===== */
+.nav {
   display: flex;
   align-items: center;
   gap: 14px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* força horizontal */
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;       /* links lado a lado */
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  display: inline-block; /* força cada link em linha */
 }
 
 .nav a{
@@ -84,6 +97,14 @@ p{ margin: 0; }
 .nav a:hover{
   background: rgba(255,255,255,.08);
   color: rgba(255,255,255,.95);
+}
+
+/* Mobile: menu vertical em telas pequenas */
+@media (max-width: 600px) {
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 /* ===== Buttons ===== */
