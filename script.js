@@ -17,3 +17,15 @@ document.addEventListener("DOMContentLoaded", () => {
       if(!target)return;
       e.preventDefault();
       target
+      const track = document.querySelector('.carousel-track');
+let index = 0;
+
+function moveCarousel() {
+  const members = document.querySelectorAll('.team-member');
+  index++;
+  if (index >= members.length) index = 0;
+  const offset = -index * (members[0].offsetWidth + 20); // 20 = gap
+  track.style.transform = `translateX(${offset}px)`;
+}
+
+setInterval(moveCarousel, 3000); // muda a cada 3 segundos
