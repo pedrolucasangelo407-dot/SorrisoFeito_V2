@@ -1,259 +1,277 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SorrisoFeito | Clínica Odontológica</title>
+  <meta name="description" content="SorrisoFeito: odontologia moderna, atendimento humanizado e resultados reais. Agende pelo WhatsApp." />
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Ajustes premium do topo e tamanhos (sem mexer no seu style.css) -->
+  <style>
+    /* Header premium (fixo e organizado) */
+    .header__inner{
+      padding: 12px 0 !important;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 210px; /* impede o menu esmagar a logo */
+    }
+
+    .brand__logo{
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+    }
+
+    .brand__name{
+      display:flex;
+      flex-direction:column;
+      line-height: 1.1;
+    }
+
+    .brand__name strong{
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: .2px;
+    }
+
+    .brand__name span{
+      font-size: 12px;
+      color: rgba(234,240,255,.70);
+    }
+
+    /* Menu premium alinhado */
+    .nav{
+      flex-wrap: nowrap !important;
+      gap: 10px !important;
+    }
+
+    .nav a{
+      white-space: nowrap;
+    }
+
+    /* Espaço do site por causa do header fixo */
+    .page{
+      padding-top: 86px;
+    }
+
+    /* Hero premium */
+    .hero{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+
+    .hero__img{
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 18px 50px rgba(0,0,0,.35);
+    }
+
+    .hero__img img{
+      width: 100%;
+      height: 100%;
+      max-height: 340px;
+      object-fit: cover;
+      display:block;
+    }
+
+    /* Cards serviços com imagem pequena */
+    .service-card img{
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(255,255,255,.10);
+    }
+
+    /* Responsivo premium */
+    @media(max-width: 900px){
+      .hero{ grid-template-columns: 1fr; }
+      .brand{ min-width: unset; }
+      .nav{ flex-wrap: wrap !important; justify-content: flex-end; }
+      .page{ padding-top: 108px; }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- ===== Header fixo ===== -->
+  <!-- HEADER FIXO -->
   <header class="header">
     <div class="container header__inner">
 
-      <!-- Logo + Nome -->
-      <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;">
-        <img
-          src="img/cadeira.odonto.png"
-          alt="Logo SorrisoFeito"
-          style="width:38px;height:38px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,.14);"
-        />
-        <span>SorrisoFeito</span>
+      <!-- Brand -->
+      <a href="index.html" class="brand">
+        <img class="brand__logo" src="Imagens/sala.vazia.png" alt="SorrisoFeito" />
+        <div class="brand__name">
+          <strong>SorrisoFeito</strong>
+          <span>Clínica Odontológica</span>
+        </div>
       </a>
 
       <!-- Menu -->
       <nav class="nav" aria-label="Menu principal">
-        <a href="index.html">Home</a>
+        <a href="index.html" style="background: rgba(255,255,255,.08); color: rgba(255,255,255,.95);">Home</a>
         <a href="servicos.html">Serviços</a>
         <a href="sobre.html">Sobre</a>
         <a href="equipe.html">Equipe</a>
         <a href="blog.html">Avaliações</a>
         <a href="contato.html">Contato</a>
+        <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+          Agendar agora
+        </a>
       </nav>
-
-      <!-- CTA -->
-      <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
-        Agendar agora
-      </a>
 
     </div>
   </header>
 
-  <!-- ===== Hero ===== -->
-  <main>
-    <section style="padding: 34px 0 12px;">
-      <div class="container" style="display:grid;grid-template-columns: 1.2fr .8fr;gap:18px;align-items:center;">
-        
-        <!-- Texto -->
-        <div class="card" style="padding:22px;">
-          <h1 style="font-size:28px;line-height:1.2;margin-bottom:10px;">
-            Seu sorriso mais bonito começa com um atendimento premium.
+  <div class="page">
+    <main class="container" style="padding: 18px 0 60px;">
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="card">
+          <h1 style="font-size: 30px; margin-bottom: 10px;">
+            Seu sorriso com <span style="color: var(--accent);">confiança</span>, conforto e resultado.
           </h1>
 
-          <p style="color: rgba(234,240,255,.80); margin-bottom:16px;">
-            Na <strong>SorrisoFeito</strong> você encontra conforto, segurança e profissionais qualificados.
-            Aqui o atendimento é rápido, humano e focado no que importa: <strong>resultado</strong>.
+          <p style="color: rgba(234,240,255,.78); font-size: 15px; margin-bottom: 16px;">
+            Na <strong>SorrisoFeito</strong>, você encontra atendimento humanizado, ambiente moderno e tratamentos
+            planejados com transparência. Agende sua avaliação e saiba o melhor caminho para o seu sorriso.
           </p>
 
-          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <div style="display:flex; gap: 12px; flex-wrap: wrap;">
             <a class="btn" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
-              Chamar no WhatsApp
+              Agendar no WhatsApp
             </a>
             <a class="btn btn--ghost" href="servicos.html">
               Ver serviços
             </a>
           </div>
 
-          <div style="margin-top:16px;color:rgba(234,240,255,.70);font-size:13px;">
-            ⭐⭐⭐⭐⭐ Atendimento avaliado por pacientes reais.
+          <div style="margin-top: 16px; display:flex; gap: 12px; flex-wrap: wrap;">
+            <div class="card" style="padding: 12px 14px; flex: 1;">
+              <strong>⭐ 4.9/5</strong>
+              <p style="color: rgba(234,240,255,.72); font-size: 13px;">Avaliações reais de pacientes</p>
+            </div>
+            <div class="card" style="padding: 12px 14px; flex: 1;">
+              <strong>🦷 Odonto Moderna</strong>
+              <p style="color: rgba(234,240,255,.72); font-size: 13px;">Estética + saúde bucal</p>
+            </div>
+            <div class="card" style="padding: 12px 14px; flex: 1;">
+              <strong>⏱️ Atendimento rápido</strong>
+              <p style="color: rgba(234,240,255,.72); font-size: 13px;">Suporte direto no WhatsApp</p>
+            </div>
           </div>
         </div>
 
-        <!-- Imagem -->
-        <div class="card" style="padding:0;overflow:hidden;">
-          <img src="img/sala.vazia.png" alt="Ambiente confortável da clínica" />
+        <div class="hero__img">
+          <img src="Imagens/recepcao.vazia.png" alt="Ambiente da clínica SorrisoFeito">
         </div>
+      </section>
 
-      </div>
-    </section>
-
-    <!-- ===== Serviços (resumo) ===== -->
-    <section style="padding: 18px 0;">
-      <div class="container">
-        <div style="display:flex;align-items:end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:12px;">
+      <!-- SERVIÇOS (TOP 3) -->
+      <section style="margin-bottom: 18px;">
+        <div style="display:flex; align-items:end; justify-content:space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 12px;">
           <div>
-            <h2 style="font-size:20px;margin-bottom:6px;">Serviços mais bem avaliados</h2>
+            <h2 style="font-size: 20px;">Serviços mais procurados</h2>
             <p style="color: rgba(234,240,255,.72); font-size: 14px;">
-              Os tratamentos que mais geram resultado (e elogios).
+              Selecionamos os tratamentos mais buscados pelos nossos pacientes.
             </p>
           </div>
-
           <a class="btn btn--ghost btn--small" href="servicos.html">Ver todos</a>
         </div>
 
         <div class="grid grid--cards">
-
-          <article class="card">
-            <img src="img/clareamento.png" alt="Clareamento dental" style="border-radius:14px;margin-bottom:12px;" />
+          <article class="card service-card">
+            <img src="Imagens/clareamento.png" alt="Clareamento dental">
             <h3>Clareamento Dental</h3>
-            <p>Sorriso mais branco, natural e harmonioso, com acompanhamento profissional.</p>
-            <div style="margin-top:12px;">
-              <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
-                Agendar agora
-              </a>
+            <p>Melhore a estética do sorriso com segurança, técnica e acompanhamento.</p>
+            <div style="margin-top: 12px;">
+              <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">Agendar</a>
             </div>
           </article>
 
-          <article class="card">
-            <img src="img/aparelho.png" alt="Aparelho ortodôntico" style="border-radius:14px;margin-bottom:12px;" />
-            <h3>Ortodontia (Aparelho)</h3>
-            <p>Alinhamento dental com planejamento e foco em estética + saúde.</p>
-            <div style="margin-top:12px;">
-              <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
-                Agendar agora
-              </a>
+          <article class="card service-card">
+            <img src="Imagens/cadeira.odonto.png" alt="Avaliação odontológica">
+            <h3>Avaliação Completa</h3>
+            <p>Diagnóstico detalhado + plano de tratamento com clareza e transparência.</p>
+            <div style="margin-top: 12px;">
+              <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">Agendar</a>
             </div>
           </article>
 
-          <article class="card">
-            <img src="img/dentista.dentadura.png" alt="Prótese dentária" style="border-radius:14px;margin-bottom:12px;" />
-            <h3>Próteses / Dentaduras</h3>
-            <p>Conforto, encaixe e estética para você voltar a sorrir com confiança.</p>
-            <div style="margin-top:12px;">
-              <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
-                Agendar agora
-              </a>
+          <article class="card service-card">
+            <img src="Imagens/dentista.dentadura.png" alt="Próteses e reabilitação">
+            <h3>Próteses e Reabilitação</h3>
+            <p>Recupere função e estética com materiais de qualidade e excelente acabamento.</p>
+            <div style="margin-top: 12px;">
+              <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">Agendar</a>
             </div>
           </article>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== Sobre / Equipe / Avaliações / Contato (resumos) ===== -->
-    <section style="padding: 18px 0 40px;">
-      <div class="container">
-        <div class="grid grid--cards">
-
-          <!-- Sobre -->
-          <article class="card">
-            <h3>Sobre a SorrisoFeito</h3>
-            <p>
-              Estrutura moderna, atendimento humanizado e foco total em qualidade.
-              Aqui você se sente seguro do início ao fim.
-            </p>
-            <div style="margin-top:12px;">
-              <a class="btn btn--ghost btn--small" href="sobre.html">Conhecer a clínica</a>
-            </div>
-          </article>
-
-          <!-- Equipe -->
-          <article class="card">
-            <h3>Nossa Equipe</h3>
-            <p>
-              Profissionais experientes e comprometidos com um atendimento de alto padrão.
-            </p>
-            <div style="margin-top:12px;">
-              <a class="btn btn--ghost btn--small" href="equipe.html">Ver profissionais</a>
-            </div>
-          </article>
-
-          <!-- Avaliações -->
-          <article class="card">
-            <h3>Avaliações (pacientes)</h3>
-            <p>
-              Depoimentos reais de quem já passou pela SorrisoFeito.
-              Transparência total — você sabe o que esperar.
-            </p>
-            <div style="margin-top:12px;">
-              <a class="btn btn--ghost btn--small" href="blog.html">Ver avaliações</a>
-            </div>
-          </article>
-
-        </div>
-
-        <!-- Preview Avaliações (tipo blog) -->
-        <div style="margin-top:16px;">
-          <h2 style="font-size:18px;margin-bottom:10px;">O que os pacientes dizem</h2>
-
-          <div class="grid grid--cards">
-            <article class="card" style="display:flex;gap:12px;align-items:flex-start;">
-              <img src="img/dentista.mulher.png" alt="Foto perfil avaliação"
-                   style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,.12);" />
-              <div>
-                <div style="font-weight:900;">★★★★★</div>
-                <p style="color:rgba(234,240,255,.80);font-size:14px;">
-                  “Atendimento impecável! Me explicaram tudo e eu saí muito mais confiante com meu sorriso.”
-                </p>
-                <div style="margin-top:6px;color:rgba(234,240,255,.65);font-size:12px;">Paciente verificada</div>
-              </div>
-            </article>
-
-            <article class="card" style="display:flex;gap:12px;align-items:flex-start;">
-              <img src="img/dentista.homem.png" alt="Foto perfil avaliação"
-                   style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,.12);" />
-              <div>
-                <div style="font-weight:900;">★★★★☆</div>
-                <p style="color:rgba(234,240,255,.80);font-size:14px;">
-                  “Clínica organizada, ambiente muito bom e o resultado do clareamento ficou perfeito.”
-                </p>
-                <div style="margin-top:6px;color:rgba(234,240,255,.65);font-size:12px;">Paciente verificada</div>
-              </div>
-            </article>
-
-            <article class="card" style="display:flex;gap:12px;align-items:flex-start;">
-              <img src="img/paciente.satisfeita.png" alt="Paciente satisfeita"
-                   style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,.12);" />
-              <div>
-                <div style="font-weight:900;">★★★★★</div>
-                <p style="color:rgba(234,240,255,.80);font-size:14px;">
-                  “Eu tinha medo de dentista… aqui me senti acolhida. Recomendo muito!”
-                </p>
-                <div style="margin-top:6px;color:rgba(234,240,255,.65);font-size:12px;">Paciente verificada</div>
-              </div>
-            </article>
+      <!-- RESUMO DAS PÁGINAS -->
+      <section class="grid grid--cards" style="margin-bottom: 18px;">
+        <div class="card">
+          <h3>Sobre a Clínica</h3>
+          <p>Conheça nossos diferenciais, estrutura e por que a SorrisoFeito é referência.</p>
+          <div style="margin-top: 12px;">
+            <a class="btn btn--ghost btn--small" href="sobre.html">Ver Sobre</a>
           </div>
         </div>
 
-        <!-- Contato Preview -->
-        <div style="margin-top:20px;" class="card">
-          <div style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;">
-            <div>
-              <h2 style="font-size:18px;margin-bottom:6px;">Contato rápido</h2>
-              <p style="color: rgba(234,240,255,.75); font-size: 14px;">
-                Agende pelo WhatsApp ou veja a localização.
-              </p>
-            </div>
-
-            <div style="display:flex;gap:10px;flex-wrap:wrap;">
-              <a class="btn" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
-                WhatsApp: (45) 99100-2660
-              </a>
-              <a class="btn btn--ghost" href="contato.html">
-                Ver página de contato
-              </a>
-            </div>
+        <div class="card">
+          <h3>Equipe</h3>
+          <p>Profissionais qualificados, atendimento humanizado e foco total em resultado.</p>
+          <div style="margin-top: 12px;">
+            <a class="btn btn--ghost btn--small" href="equipe.html">Conhecer equipe</a>
           </div>
         </div>
 
-      </div>
-    </section>
-  </main>
+        <div class="card">
+          <h3>Avaliações</h3>
+          <p>Veja relatos reais de pacientes e por que somos tão bem avaliados.</p>
+          <div style="margin-top: 12px;">
+            <a class="btn btn--ghost btn--small" href="blog.html">Ver avaliações</a>
+          </div>
+        </div>
+      </section>
 
-  <!-- ===== WhatsApp Flutuante ===== -->
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/5545991002660"
-    target="_blank"
-    rel="noopener"
-    aria-label="Chamar no WhatsApp"
-  >
-    WhatsApp
+      <!-- CTA FINAL -->
+      <section class="card">
+        <h2 style="font-size: 20px; margin-bottom: 10px;">Agende sua avaliação hoje</h2>
+        <p style="color: rgba(234,240,255,.78); margin-bottom: 14px;">
+          Atendimento rápido e suporte direto no WhatsApp. Clique no botão e fale com a clínica.
+        </p>
+        <a class="btn" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+          Falar no WhatsApp
+        </a>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- WhatsApp Flutuante -->
+  <a class="whatsapp-float" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+    WhatsApp • Agendar
   </a>
 
+  <script src="script.js"></script>
 </body>
 </html>
