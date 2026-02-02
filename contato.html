@@ -1,27 +1,143 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contato | SorrisoFeito</title>
+  <meta name="description" content="Entre em contato com a clínica SorrisoFeito. Agende pelo WhatsApp, veja endereço e localização no Google Maps." />
 
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Header premium (fixo e organizado) */
+    .header__inner{ padding: 12px 0 !important; }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 210px;
+    }
+    .brand__logo{
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+    }
+    .brand__name{
+      display:flex;
+      flex-direction:column;
+      line-height: 1.1;
+    }
+    .brand__name strong{
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: .2px;
+    }
+    .brand__name span{
+      font-size: 12px;
+      color: rgba(234,240,255,.70);
+    }
+
+    .nav{ flex-wrap: nowrap !important; gap: 10px !important; }
+    .nav a{ white-space: nowrap; }
+
+    .page{ padding-top: 86px; }
+
+    /* Layout contato */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 18px;
+    }
+
+    .info-list{
+      display:grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .info-item{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+    }
+
+    .info-item strong{
+      display:block;
+      margin-bottom: 2px;
+    }
+
+    /* Form */
+    .form{
+      display:grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .field{
+      display:grid;
+      gap: 6px;
+    }
+
+    .field label{
+      font-size: 13px;
+      color: rgba(234,240,255,.78);
+      font-weight: 700;
+    }
+
+    .field input, .field textarea{
+      width: 100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.20);
+      color: var(--text);
+      outline: none;
+    }
+
+    .field textarea{
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .field input:focus, .field textarea:focus{
+      border-color: rgba(0,212,255,.55);
+      box-shadow: 0 0 0 3px rgba(0,212,255,.12);
+    }
+
+    .map{ margin-bottom: 18px; }
+
+    @media(max-width: 900px){
+      .brand{ min-width: unset; }
+      .nav{ flex-wrap: wrap !important; justify-content: flex-end; }
+      .page{ padding-top: 108px; }
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- ===== Header fixo ===== -->
+  <!-- HEADER FIXO -->
   <header class="header">
     <div class="container header__inner">
 
-      <!-- Logo + Nome -->
-      <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;">
-        <img
-          src="img/cadeira.odonto.png"
-          alt="Logo SorrisoFeito"
-          style="width:38px;height:38px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,.14);"
-        />
-        <span>SorrisoFeito</span>
+      <!-- Brand -->
+      <a href="index.html" class="brand">
+        <img class="brand__logo" src="images/sala.vazia.png" alt="SorrisoFeito" />
+        <div class="brand__name">
+          <strong>SorrisoFeito</strong>
+          <span>Clínica Odontológica</span>
+        </div>
       </a>
 
       <!-- Menu -->
@@ -32,142 +148,171 @@
         <a href="equipe.html">Equipe</a>
         <a href="blog.html">Avaliações</a>
         <a href="contato.html" style="background: rgba(255,255,255,.08); color: rgba(255,255,255,.95);">Contato</a>
+        <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+          Agendar agora
+        </a>
       </nav>
-
-      <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
-        Agendar agora
-      </a>
 
     </div>
   </header>
 
-  <main>
+  <div class="page">
+    <main class="container" style="padding: 18px 0 60px;">
 
-    <!-- ===== Hero Contato ===== -->
-    <section style="padding: 34px 0 14px;">
-      <div class="container" style="display:grid;grid-template-columns: 1.15fr .85fr;gap:18px;align-items:center;">
+      <!-- HERO -->
+      <section class="card" style="margin-bottom: 18px;">
+        <h1 style="font-size: 30px; margin-bottom: 10px;">Contato</h1>
+        <p style="color: rgba(234,240,255,.78); font-size: 15px;">
+          Fale com a <strong>SorrisoFeito</strong> e agende sua avaliação. Atendimento rápido, suporte direto e
+          transparência no plano de tratamento.
+        </p>
 
-        <div class="card" style="padding:22px;">
-          <h1 style="font-size:26px;line-height:1.2;margin-bottom:10px;">
-            Contato e localização
-          </h1>
+        <div style="margin-top: 14px; display:flex; gap: 12px; flex-wrap: wrap;">
+          <a class="btn" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+            Falar no WhatsApp
+          </a>
+          <a class="btn btn--ghost" href="servicos.html">
+            Ver serviços
+          </a>
+        </div>
+      </section>
 
-          <p style="color: rgba(234,240,255,.80); margin-bottom:14px;">
-            Agende seu atendimento de forma rápida e simples.
-            Você pode chamar no WhatsApp e garantir seu horário agora.
+      <!-- GRID: INFOS + FORM -->
+      <section class="contact-grid">
+
+        <!-- Infos -->
+        <div class="card">
+          <h2 style="font-size: 20px; margin-bottom: 10px;">Informações</h2>
+          <p style="color: rgba(234,240,255,.78); font-size: 14px;">
+            Você pode entrar em contato pelo WhatsApp ou visitar a clínica. Abaixo estão os dados principais.
           </p>
 
-          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <div class="info-list">
+            <div class="info-item">
+              <div style="font-size:18px;">📍</div>
+              <div>
+                <strong>Endereço</strong>
+                <span style="color: rgba(234,240,255,.75); font-size: 14px;">
+                  Av. Brasil, 1234 — Centro, Cascavel - PR
+                </span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div style="font-size:18px;">🕒</div>
+              <div>
+                <strong>Horário de atendimento</strong>
+                <span style="color: rgba(234,240,255,.75); font-size: 14px;">
+                  Seg a Sex: 08:00–18:00<br />
+                  Sábado: 08:00–12:00
+                </span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div style="font-size:18px;">📞</div>
+              <div>
+                <strong>WhatsApp</strong>
+                <span style="color: rgba(234,240,255,.75); font-size: 14px;">
+                  (45) 99100-2660
+                </span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div style="font-size:18px;">✅</div>
+              <div>
+                <strong>Atendimento</strong>
+                <span style="color: rgba(234,240,255,.75); font-size: 14px;">
+                  Avaliação • Clareamento • Reabilitação • Ortodontia
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 14px;">
             <a class="btn" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
-              WhatsApp: (45) 99100-2660
-            </a>
-            <a class="btn btn--ghost" href="#mapa">
-              Ver no mapa
-            </a>
-          </div>
-
-          <div style="margin-top:16px;color:rgba(234,240,255,.70);font-size:13px;">
-            Atendimento premium • Resposta rápida • Agendamento fácil
-          </div>
-        </div>
-
-        <div class="card" style="padding:0;overflow:hidden;">
-          <img src="img/recepcao.vazia.png" alt="Recepção da clínica" />
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== Info de contato ===== -->
-    <section style="padding: 12px 0 18px;">
-      <div class="container">
-        <h2 style="font-size:20px;margin-bottom:12px;">Informações</h2>
-
-        <div class="grid grid--cards">
-
-          <article class="card">
-            <h3>WhatsApp</h3>
-            <p style="margin-bottom:12px;">Clique e agende agora mesmo.</p>
-            <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
-              Chamar no WhatsApp
-            </a>
-          </article>
-
-          <article class="card">
-            <h3>Endereço</h3>
-            <p style="color: rgba(234,240,255,.78);">
-              Av. Brasil, 1200 - Centro<br />
-              Cascavel - PR, 85810-000
-            </p>
-            <p style="margin-top:10px;color: rgba(234,240,255,.65);font-size:13px;">
-              (Endereço exemplo)
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Horário de atendimento</h3>
-            <p style="color: rgba(234,240,255,.78);">
-              Seg a Sex: 08:00 - 18:00<br />
-              Sábado: 08:00 - 12:00<br />
-              Domingo: Fechado
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Mapa ===== -->
-    <section id="mapa" style="padding: 10px 0 18px;">
-      <div class="container">
-        <h2 style="font-size:18px;margin-bottom:12px;">Como chegar</h2>
-
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps?q=Av.%20Brasil%201200%20Cascavel%20PR&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Mapa - SorrisoFeito"
-          ></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CTA Final ===== -->
-    <section style="padding: 10px 0 40px;">
-      <div class="container">
-        <div class="card" style="padding:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;">
-          <div>
-            <h2 style="font-size:18px;margin-bottom:6px;">Quer agendar agora?</h2>
-            <p style="color: rgba(234,240,255,.75); font-size: 14px;">
-              Chame no WhatsApp e garanta seu horário em poucos segundos.
-            </p>
-          </div>
-
-          <div style="display:flex;gap:10px;flex-wrap:wrap;">
-            <a class="btn" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
-              Agendar pelo WhatsApp
-            </a>
-            <a class="btn btn--ghost" href="servicos.html">
-              Ver serviços
+              Agendar agora no WhatsApp
             </a>
           </div>
         </div>
-      </div>
-    </section>
 
-  </main>
+        <!-- Form -->
+        <div class="card">
+          <h2 style="font-size: 20px; margin-bottom: 10px;">Enviar mensagem</h2>
+          <p style="color: rgba(234,240,255,.78); font-size: 14px;">
+            Preencha e clique em “Enviar”. A mensagem vai direto para o WhatsApp da clínica.
+          </p>
 
-  <!-- ===== WhatsApp Flutuante ===== -->
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/5545991002660"
-    target="_blank"
-    rel="noopener"
-    aria-label="Chamar no WhatsApp"
-  >
-    WhatsApp
+          <form class="form" onsubmit="return sendToWhatsApp(event)">
+            <div class="field">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" placeholder="Seu nome" required />
+            </div>
+
+            <div class="field">
+              <label for="telefone">Telefone</label>
+              <input id="telefone" name="telefone" placeholder="(DDD) 9XXXX-XXXX" required />
+            </div>
+
+            <div class="field">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Olá! Quero agendar uma avaliação..." required></textarea>
+            </div>
+
+            <button class="btn" type="submit">
+              Enviar no WhatsApp
+            </button>
+          </form>
+
+          <script>
+            function sendToWhatsApp(event){
+              event.preventDefault();
+
+              const nome = document.getElementById("nome").value.trim();
+              const telefone = document.getElementById("telefone").value.trim();
+              const mensagem = document.getElementById("mensagem").value.trim();
+
+              const texto = `Olá! Me chamo ${nome}.%0ATelefone: ${telefone}.%0A%0AMensagem: ${mensagem}`;
+              const url = `https://wa.me/5545991002660?text=${texto}`;
+
+              window.open(url, "_blank");
+              return false;
+            }
+          </script>
+        </div>
+
+      </section>
+
+      <!-- MAPA -->
+      <section class="map">
+        <iframe
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Av.%20Brasil%201234%20Cascavel%20PR&output=embed">
+        </iframe>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="card">
+        <h2 style="font-size: 20px; margin-bottom: 10px;">Chegou a hora de cuidar do seu sorriso</h2>
+        <p style="color: rgba(234,240,255,.78); margin-bottom: 14px;">
+          Clique no botão e fale com a clínica agora mesmo.
+        </p>
+
+        <a class="btn" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+          Falar no WhatsApp
+        </a>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- WhatsApp Flutuante -->
+  <a class="whatsapp-float" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+    WhatsApp • Agendar
   </a>
 
+  <script src="script.js"></script>
 </body>
 </html>
