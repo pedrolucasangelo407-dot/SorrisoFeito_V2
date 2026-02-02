@@ -1,27 +1,143 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Equipe | SorrisoFeito</title>
+  <meta name="description" content="Conheça a equipe da clínica SorrisoFeito: profissionais experientes, atendimento humanizado e tecnologia moderna." />
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Ajustes premium (sem mexer no seu style.css) -->
+  <style>
+    /* Header premium (fixo e organizado) */
+    .header__inner{ padding: 12px 0 !important; }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 210px;
+    }
+
+    .brand__logo{
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+    }
+
+    .brand__name{
+      display:flex;
+      flex-direction:column;
+      line-height: 1.1;
+    }
+
+    .brand__name strong{
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: .2px;
+    }
+
+    .brand__name span{
+      font-size: 12px;
+      color: rgba(234,240,255,.70);
+    }
+
+    /* Menu premium alinhado */
+    .nav{
+      flex-wrap: nowrap !important;
+      gap: 10px !important;
+    }
+    .nav a{ white-space: nowrap; }
+
+    /* Espaço por causa do header fixo */
+    .page{ padding-top: 86px; }
+
+    /* Hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+
+    .hero__img{
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 18px 50px rgba(0,0,0,.35);
+    }
+
+    .hero__img img{
+      width: 100%;
+      height: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      display:block;
+    }
+
+    /* Card profissional */
+    .pro-card{
+      display:flex;
+      gap: 14px;
+      align-items:center;
+    }
+
+    .pro-card__img{
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      flex: 0 0 auto;
+    }
+
+    .pro-meta{
+      display:flex;
+      gap:10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .tag{
+      font-size: 13px;
+      color: rgba(234,240,255,.75);
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+
+    /* Responsivo */
+    @media(max-width: 900px){
+      .hero{ grid-template-columns: 1fr; }
+      .brand{ min-width: unset; }
+      .nav{ flex-wrap: wrap !important; justify-content: flex-end; }
+      .page{ padding-top: 108px; }
+      .pro-card{ align-items:flex-start; }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- ===== Header fixo ===== -->
+  <!-- HEADER FIXO -->
   <header class="header">
     <div class="container header__inner">
 
-      <!-- Logo + Nome -->
-      <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;">
-        <img
-          src="img/cadeira.odonto.png"
-          alt="Logo SorrisoFeito"
-          style="width:38px;height:38px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,.14);"
-        />
-        <span>SorrisoFeito</span>
+      <!-- Brand -->
+      <a href="index.html" class="brand">
+        <img class="brand__logo" src="images/sala.vazia.png" alt="SorrisoFeito" />
+        <div class="brand__name">
+          <strong>SorrisoFeito</strong>
+          <span>Clínica Odontológica</span>
+        </div>
       </a>
 
       <!-- Menu -->
@@ -32,37 +148,31 @@
         <a href="equipe.html" style="background: rgba(255,255,255,.08); color: rgba(255,255,255,.95);">Equipe</a>
         <a href="blog.html">Avaliações</a>
         <a href="contato.html">Contato</a>
+        <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+          Agendar agora
+        </a>
       </nav>
-
-      <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
-        Agendar agora
-      </a>
 
     </div>
   </header>
 
-  <main>
+  <div class="page">
+    <main class="container" style="padding: 18px 0 60px;">
 
-    <!-- ===== Hero ===== -->
-    <section style="padding: 34px 0 14px;">
-      <div class="container" style="display:grid;grid-template-columns: 1.15fr .85fr;gap:18px;align-items:center;">
-
-        <div class="card" style="padding:22px;">
-          <h1 style="font-size:26px;line-height:1.2;margin-bottom:10px;">
-            Conheça nossa equipe
+      <!-- HERO -->
+      <section class="hero">
+        <div class="card">
+          <h1 style="font-size: 30px; margin-bottom: 10px;">
+            Nossa <span style="color: var(--accent);">Equipe</span>
           </h1>
 
-          <p style="color: rgba(234,240,255,.80); margin-bottom:14px;">
-            Atendimento premium não é só estrutura bonita.
-            É <strong>profissionalismo</strong>, <strong>experiência</strong> e <strong>cuidado</strong> em cada detalhe.
+          <p style="color: rgba(234,240,255,.78); font-size: 15px; margin-bottom: 16px;">
+            Aqui você é atendido por profissionais experientes, com foco em conforto, transparência e
+            resultados reais. Cada tratamento é planejado com cuidado — do primeiro atendimento ao
+            acompanhamento final.
           </p>
 
-          <p style="color: rgba(234,240,255,.75); margin-bottom:16px;">
-            Na SorrisoFeito, você é atendido por profissionais preparados para
-            oferecer segurança, clareza e o melhor resultado possível.
-          </p>
-
-          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <div style="display:flex; gap: 12px; flex-wrap: wrap;">
             <a class="btn" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
               Agendar avaliação
             </a>
@@ -71,138 +181,122 @@
             </a>
           </div>
 
-          <div style="margin-top:16px;color:rgba(234,240,255,.70);font-size:13px;">
-            ⭐⭐⭐⭐⭐ Profissionais qualificados e atendimento humanizado.
+          <div style="margin-top: 16px; display:flex; gap: 12px; flex-wrap: wrap;">
+            <div class="card" style="padding: 12px 14px; flex: 1;">
+              <strong>👨‍⚕️ Profissionais qualificados</strong>
+              <p style="color: rgba(234,240,255,.72); font-size: 13px;">Experiência + cuidado</p>
+            </div>
+            <div class="card" style="padding: 12px 14px; flex: 1;">
+              <strong>🦷 Técnicas modernas</strong>
+              <p style="color: rgba(234,240,255,.72); font-size: 13px;">Estética + saúde</p>
+            </div>
+            <div class="card" style="padding: 12px 14px; flex: 1;">
+              <strong>⭐ Alta satisfação</strong>
+              <p style="color: rgba(234,240,255,.72); font-size: 13px;">Pacientes recomendam</p>
+            </div>
           </div>
         </div>
 
-        <div class="card" style="padding:0;overflow:hidden;">
-          <img src="img/equipe.png" alt="Equipe SorrisoFeito" />
+        <div class="hero__img">
+          <img src="images/recepcao.vazia.png" alt="Ambiente da clínica SorrisoFeito">
         </div>
+      </section>
 
-      </div>
-    </section>
-
-    <!-- ===== Cards da equipe ===== -->
-    <section style="padding: 12px 0 18px;">
-      <div class="container">
-
-        <div style="display:flex;align-items:end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:12px;">
-          <div>
-            <h2 style="font-size:20px;margin-bottom:6px;">Profissionais</h2>
-            <p style="color: rgba(234,240,255,.72); font-size: 14px;">
-              Especialistas prontos para cuidar do seu sorriso.
-            </p>
-          </div>
+      <!-- DIFERENCIAIS -->
+      <section class="grid grid--cards" style="margin-bottom: 18px;">
+        <div class="card">
+          <h3>Atendimento Humanizado</h3>
+          <p>Explicamos tudo com clareza e cuidamos do seu conforto em cada etapa.</p>
         </div>
+        <div class="card">
+          <h3>Experiência + Técnica</h3>
+          <p>Equipe qualificada e atualizada com as melhores práticas odontológicas.</p>
+        </div>
+        <div class="card">
+          <h3>Resultados Visíveis</h3>
+          <p>Tratamentos focados em estética, saúde e bem-estar para seu sorriso.</p>
+        </div>
+      </section>
+
+      <!-- PROFISSIONAIS -->
+      <section class="card" style="margin-bottom: 18px;">
+        <h2 style="font-size: 20px; margin-bottom: 12px;">Profissionais</h2>
 
         <div class="grid grid--cards">
 
-          <!-- Profissional 1 -->
-          <article class="card" style="text-align:center;">
-            <img
-              src="img/dentista.homem.png"
-              alt="Dr. Rafael - Dentista"
-              style="width:150px;height:150px;border-radius:50%;object-fit:cover;margin:0 auto 12px;border:1px solid rgba(255,255,255,.12);"
-            />
-            <h3 style="margin-bottom:6px;">Dr. Rafael</h3>
-            <p style="margin-bottom:12px;">Clínico Geral • Estética • Avaliação</p>
-            <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
-              Agendar com a equipe
-            </a>
+          <!-- Dentista Homem -->
+          <article class="card pro-card">
+            <img class="pro-card__img" src="images/dentista.homem.png" alt="Dr. Lucas - Dentista" />
+
+            <div>
+              <h3 style="margin-bottom: 6px;">Dr. Lucas Almeida</h3>
+              <p style="margin-bottom: 10px;">
+                Especialista em estética do sorriso, reabilitação e atendimento humanizado.
+                Foco em conforto e excelência no resultado.
+              </p>
+
+              <div class="pro-meta">
+                <span class="tag">⭐ 5.0 • +300 atendimentos</span>
+                <span class="tag">⏱️ Atendimento rápido</span>
+                <span class="tag">🦷 Estética e reabilitação</span>
+              </div>
+
+              <div style="margin-top: 12px;">
+                <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+                  Agendar com a equipe
+                </a>
+              </div>
+            </div>
           </article>
 
-          <!-- Profissional 2 -->
-          <article class="card" style="text-align:center;">
-            <img
-              src="img/dentista.mulher.png"
-              alt="Dra. Mariana - Dentista"
-              style="width:150px;height:150px;border-radius:50%;object-fit:cover;margin:0 auto 12px;border:1px solid rgba(255,255,255,.12);"
-            />
-            <h3 style="margin-bottom:6px;">Dra. Mariana</h3>
-            <p style="margin-bottom:12px;">Ortodontia • Clareamento • Estética</p>
-            <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
-              Agendar com a equipe
-            </a>
-          </article>
+          <!-- Dentista Mulher -->
+          <article class="card pro-card">
+            <img class="pro-card__img" src="images/dentista.mulher.png" alt="Dra. Mariana - Dentista" />
 
-          <!-- Profissional 3 (exemplo extra premium) -->
-          <article class="card" style="text-align:center;">
-            <img
-              src="img/paciente.satisfeita.png"
-              alt="Atendimento Humanizado"
-              style="width:150px;height:150px;border-radius:50%;object-fit:cover;margin:0 auto 12px;border:1px solid rgba(255,255,255,.12);"
-            />
-            <h3 style="margin-bottom:6px;">Equipe de Atendimento</h3>
-            <p style="margin-bottom:12px;">Suporte • Agendamento • Orientação</p>
-            <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
-              Tirar dúvidas
-            </a>
+            <div>
+              <h3 style="margin-bottom: 6px;">Dra. Mariana Souza</h3>
+              <p style="margin-bottom: 10px;">
+                Especialista em clareamento, ortodontia e estética. Atendimento detalhista,
+                com foco em segurança e planejamento.
+              </p>
+
+              <div class="pro-meta">
+                <span class="tag">⭐ 4.9 • Alta satisfação</span>
+                <span class="tag">🦷 Estética e ortodontia</span>
+                <span class="tag">📋 Plano claro</span>
+              </div>
+
+              <div style="margin-top: 12px;">
+                <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+                  Agendar com a equipe
+                </a>
+              </div>
+            </div>
           </article>
 
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== Por que confiar ===== -->
-    <section style="padding: 10px 0 18px;">
-      <div class="container">
-        <h2 style="font-size:18px;margin-bottom:12px;">Por que você pode confiar</h2>
+      <!-- CTA FINAL -->
+      <section class="card">
+        <h2 style="font-size: 20px; margin-bottom: 10px;">Quer ser atendido pela nossa equipe?</h2>
+        <p style="color: rgba(234,240,255,.78); margin-bottom: 14px;">
+          Clique no botão abaixo e agende sua avaliação. Atendimento rápido e suporte direto pelo WhatsApp.
+        </p>
 
-        <div class="grid grid--cards">
-          <article class="card">
-            <h3>Atendimento com clareza</h3>
-            <p>Você entende o que será feito, quanto tempo leva e quais resultados esperar.</p>
-          </article>
+        <a class="btn" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+          Agendar pelo WhatsApp
+        </a>
+      </section>
 
-          <article class="card">
-            <h3>Planejamento personalizado</h3>
-            <p>Cada paciente é único. O plano é feito para o seu caso.</p>
-          </article>
+    </main>
+  </div>
 
-          <article class="card">
-            <h3>Foco em conforto</h3>
-            <p>Ambiente acolhedor e equipe preparada para reduzir ansiedade e medo.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CTA final ===== -->
-    <section style="padding: 10px 0 40px;">
-      <div class="container">
-        <div class="card" style="padding:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;">
-          <div>
-            <h2 style="font-size:18px;margin-bottom:6px;">Quer ser atendido por uma equipe premium?</h2>
-            <p style="color: rgba(234,240,255,.75); font-size: 14px;">
-              Agende agora pelo WhatsApp e garanta seu horário.
-            </p>
-          </div>
-
-          <div style="display:flex;gap:10px;flex-wrap:wrap;">
-            <a class="btn" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
-              Agendar agora
-            </a>
-            <a class="btn btn--ghost" href="contato.html">
-              Ver contato
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ===== WhatsApp Flutuante ===== -->
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/5545991002660"
-    target="_blank"
-    rel="noopener"
-    aria-label="Chamar no WhatsApp"
-  >
-    WhatsApp
+  <!-- WhatsApp Flutuante -->
+  <a class="whatsapp-float" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+    WhatsApp • Agendar
   </a>
 
+  <script src="script.js"></script>
 </body>
 </html>
