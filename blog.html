@@ -1,69 +1,148 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SorrisoFeito - Avaliações</title>
-    <link rel="stylesheet" href="style.css"> <!-- Seu CSS -->
-    <script src="script.js" defer></script> <!-- Seu JS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equipe | SorrisoFeito</title>
+  <meta name="description" content="Conheça a equipe da clínica SorrisoFeito: profissionais experientes, atendimento humanizado e tecnologia moderna." />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <!-- Menu de navegação -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">SorrisoFeito</div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="equipe.html">Equipe</a></li>
-                <li><a href="blog.html">Avaliações</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Headline da página -->
-    <section class="banner-avaliacoes">
-        <h1>O que nossos pacientes dizem</h1>
-        <p>Sorrisos transformados com cuidado, confiança e atendimento de excelência.</p>
+  <!-- HEADER FIXO -->
+  <header class="header">
+    <div class="container header__inner">
+
+      <!-- Logo + Nome -->
+      <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;">
+        <img src="logo.png" alt="Logo SorrisoFeito" style="width:40px;height:40px;border-radius:10px;object-fit:cover;">
+        <span>SorrisoFeito</span>
+      </a>
+
+      <!-- Menu -->
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="equipe.html" style="background: rgba(255,255,255,.08); color: rgba(255,255,255,.95);">Equipe</a>
+        <a href="blog.html">Avaliações</a>
+        <a href="contato.html">Contato</a>
+        <a class="btn btn--small" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+          Agendar no WhatsApp
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container" style="padding: 34px 0 60px;">
+
+    <!-- HERO / INTRO -->
+    <section class="card" style="margin-bottom: 18px;">
+      <h1 style="font-size: 28px; margin-bottom: 10px;">Nossa Equipe</h1>
+      <p style="color: rgba(234,240,255,.78); font-size: 15px;">
+        Na <strong>SorrisoFeito</strong>, você é atendido por profissionais experientes, com foco em conforto,
+        transparência e resultados reais. Aqui, cada tratamento é planejado com cuidado — do primeiro atendimento ao
+        acompanhamento final.
+      </p>
+
+      <div style="margin-top: 14px; display:flex; gap: 12px; flex-wrap: wrap;">
+        <a class="btn" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+          Agendar avaliação agora
+        </a>
+        <a class="btn btn--ghost" href="servicos.html">
+          Ver serviços
+        </a>
+      </div>
     </section>
 
-    <!-- Cards de depoimentos -->
-    <section class="avaliacoes-cards">
-        <div class="avaliacao-card">
-            <img src="images/dentista.homem.png" alt="Paciente 1" class="perfil-img">
-            <h2>João Silva</h2>
-            <div class="estrelas">⭐⭐⭐⭐⭐</div>
-            <p>O atendimento foi incrível! Me senti muito acolhido e o resultado do meu sorriso superou minhas expectativas.</p>
-        </div>
-
-        <div class="avaliacao-card">
-            <img src="images/dentista.mulher.png" alt="Paciente 2" class="perfil-img">
-            <h2>Maria Costa</h2>
-            <div class="estrelas">⭐⭐⭐⭐⭐</div>
-            <p>Profissionais muito competentes! Ambiente limpo e moderno, atendimento acolhedor e super eficaz.</p>
-        </div>
-
-        <div class="avaliacao-card">
-            <img src="images/dentista.homem.png" alt="Paciente 3" class="perfil-img">
-            <h2>Carlos Pereira</h2>
-            <div class="estrelas">⭐⭐⭐⭐</div>
-            <p>Atendimento excelente! Senti-me seguro durante todo o tratamento e estou muito satisfeito com o resultado.</p>
-        </div>
-
-        <div class="avaliacao-card">
-            <img src="images/dentista.mulher.png" alt="Paciente 4" class="perfil-img">
-            <h2>Ana Fernandes</h2>
-            <div class="estrelas">⭐⭐⭐⭐⭐</div>
-            <p>Recomendo a clínica para todos! Profissionais dedicados e atendimento muito atencioso.</p>
-        </div>
+    <!-- DIFERENCIAIS -->
+    <section class="grid grid--cards" style="margin-bottom: 18px;">
+      <div class="card">
+        <h3>Atendimento Humanizado</h3>
+        <p>Explicamos tudo com clareza e cuidamos do seu conforto em cada etapa.</p>
+      </div>
+      <div class="card">
+        <h3>Experiência + Técnica</h3>
+        <p>Equipe qualificada e atualizada com as melhores práticas odontológicas.</p>
+      </div>
+      <div class="card">
+        <h3>Resultados Visíveis</h3>
+        <p>Tratamentos focados em estética, saúde e bem-estar para seu sorriso.</p>
+      </div>
     </section>
 
-    <!-- Botão flutuante do WhatsApp -->
-    <a href="https://wa.me/5545991002660" class="whatsapp-btn" target="_blank">
-        <img src="images/whatsapp-icon.png" alt="WhatsApp">
-    </a>
+    <!-- PROFISSIONAIS -->
+    <section class="card" style="margin-bottom: 18px;">
+      <h2 style="font-size: 20px; margin-bottom: 12px;">Profissionais</h2>
 
+      <div class="grid grid--cards">
+
+        <!-- Dentista Homem -->
+        <article class="card" style="display:flex; gap: 14px; align-items:center;">
+          <img src="dentista.homem.png"
+               alt="Dr. Lucas - Dentista"
+               style="width:92px;height:92px;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,.12);" />
+
+          <div>
+            <h3 style="margin-bottom: 6px;">Dr. Lucas Almeida</h3>
+            <p style="margin-bottom: 10px;">
+              Especialista em estética do sorriso, reabilitação e atendimento humanizado.
+              Foco em conforto e excelência no resultado.
+            </p>
+            <div style="display:flex; gap:10px; flex-wrap: wrap;">
+              <span style="font-size: 13px; color: rgba(234,240,255,.75);">⭐ 5.0 • +300 atendimentos</span>
+              <span style="font-size: 13px; color: rgba(234,240,255,.75);">⏱️ Atendimento rápido</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dentista Mulher -->
+        <article class="card" style="display:flex; gap: 14px; align-items:center;">
+          <img src="dentista.mulher.png"
+               alt="Dra. Mariana - Dentista"
+               style="width:92px;height:92px;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,.12);" />
+
+          <div>
+            <h3 style="margin-bottom: 6px;">Dra. Mariana Souza</h3>
+            <p style="margin-bottom: 10px;">
+              Especialista em clareamento, ortodontia e estética. Atendimento detalhista,
+              com foco em segurança e planejamento.
+            </p>
+            <div style="display:flex; gap:10px; flex-wrap: wrap;">
+              <span style="font-size: 13px; color: rgba(234,240,255,.75);">⭐ 4.9 • Alta satisfação</span>
+              <span style="font-size: 13px; color: rgba(234,240,255,.75);">🦷 Estética e ortodontia</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="card">
+      <h2 style="font-size: 20px; margin-bottom: 10px;">Quer ser atendido pela nossa equipe?</h2>
+      <p style="color: rgba(234,240,255,.78); margin-bottom: 14px;">
+        Clique no botão abaixo e agende sua avaliação. Atendimento rápido e suporte direto pelo WhatsApp.
+      </p>
+
+      <a class="btn" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+        Agendar pelo WhatsApp
+      </a>
+    </section>
+
+  </main>
+
+  <!-- WhatsApp Flutuante -->
+  <a class="whatsapp-float" href="https://wa.me/5545991002660" target="_blank" rel="noopener">
+    WhatsApp • Agendar
+  </a>
+
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
